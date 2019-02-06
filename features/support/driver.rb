@@ -1,14 +1,3 @@
-require 'selenium-webdriver'
+require 'capybara/cucumber'
 
-
-module Driver
-    
-    def browser
-        Selenium::WebDriver.for :firefox
-    end
-
-    def close_browser
-        Selenium::WebDriver.quit
-    end 
-
-end
+Capybara.default_driver = :selenium

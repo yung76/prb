@@ -1,7 +1,8 @@
 
-include Driver
 
 Given /^browser to web site "([^"]*)"$/ do |url|
-    Driver.browser.navigate.to url
+    #browser
+    Capybara.app_host = url
+    visit ('/')
 end
 

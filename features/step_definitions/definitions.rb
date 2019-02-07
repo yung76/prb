@@ -8,3 +8,6 @@ Then /^search a kind jobs$/ do
     find(:xpath, "//div[@class='Table-column Table-headline Table-middle is-wrapped is-firstMobile']//div[contains (.,'Aseguramiento de la calidad, localización y servicio al cliente')]").click
     sleep 5
 end 
+
+Then /^click in label quality assurance$/ do
+end

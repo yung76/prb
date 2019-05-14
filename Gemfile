@@ -7,3 +7,5 @@ gem 'selenium-webdriver'
 gem 'cucumber'
 
 gem 'capybara'
+
+gem 'activesupport'

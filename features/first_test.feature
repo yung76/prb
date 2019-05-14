@@ -1,9 +1,9 @@
-Feature: Open web browser and search jobs
+Feature: Open web browser and navigate to any page
 
    Test open web browser firefox
 
-   Scenario: Visit careers job blizzard
-    Given browser to web site "http://careers.blizzard.com/es-mx/"
-    When search a kind jobs
+   Scenario: Visit a anything page
+    Given browser navigate to web site "http://takanodan.cl/"
+    When looking for an element in page
     Then click in label quality assurance
     And looking for list details jobs

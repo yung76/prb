@@ -1,6 +1,6 @@
 Before do |scenario|
-    puts  "Test started on #{Time.now.strftime '%F %T'}"
-    puts scenario
+    puts  "Test #{ scenario.name } started on #{Time.now.strftime '%F %T'} "
+
 end
 
 After do |scenario|

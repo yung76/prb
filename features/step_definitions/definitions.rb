@@ -6,11 +6,12 @@ Given /^browser navigate to web site "([^"]*)"$/ do |url|
   #Asd::WebPage.navigate_to url
     #@asd2 = WebPage.new
     #@asd2.navigate_to url
-  @@browser.go_to url
+  @brow.go_to url
 end
 
 Then /^looking for an element in page$/ do
   #@asd2.find_and_element
+  @brow.find_an_element
 end
 
 Then /^click in label quality assurance$/ do

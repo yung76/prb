@@ -17,6 +17,15 @@ class Rew
       desired_caps = {}
 
       desired_caps[:platformVersion] = ENV['PLATFORM_VERSION_DEVICE'] if ENV['PLATFORM_VERSION_DEVICE']
+      desired_caps[:platformName] = ENV['PLATFORM_NAME'] || "Android"
+      desired_caps[:deviceName] = ENV['DEVICE_NAME'] if ENV['PLATFORM_VERSION_DEVICE']
+      desired_caps[:udid] = ENV['DEVICE_ID'] if ENV['DEVICE_ID']
+      desired_caps[:automationName] = ENV['AUTOMATION_NAME'] || "Uiautomator2"
+      desired_caps[:appPackage] = ENV['APP_PACKAGE'] if ENV['APP_PACKAGE']
+      desired_caps[:appActivity] = ENV['APP_ACTIVITY'] if ENV['APP_ACTIVITY']
+      #used the below line to test web browser smartphone
+      desired_caps[:browserName] = ENV['BROWSER_NAME_MOBILE'] if ENV['BROWSER_NAME_MOBILE']
+
 
       Capybara.register_driver :appium do |app|
         appium_lib_options = {

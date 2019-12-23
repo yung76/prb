@@ -26,7 +26,7 @@ Then /^looking for list details jobs$/ do
 end
 
 Given /^an any application and tap$/ do
-  @brow.find_element_on_cellphone
+  @page.find_element_on_cellphone
 
   #@asd2.find_and_element
   #@brow.find_an_element

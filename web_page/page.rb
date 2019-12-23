@@ -24,8 +24,15 @@ module Share
     def find_element_on_cellphone
       puts 'Looking for and element and clicking '
       #find(:xpath, "//a[contains(.,'Nuevas adquisiciones')]")
-      asd = find(:xpath, "//android.widget.Button[contains(@resource-id, 'digit_2')]")
-      asd.click
+
+      find(:xpath, "//android.widget.Button[contains(@text,'NO')]").click
+      find(:xpath, "//android.widget.Button[contains(@text,'CANCELAR')]").click
+      find(:xpath, "//android.widget.TextView[contains(@text,'LO ENTIENDO')]").click
+      Capybara.current_session.driver.browser.find_element_by_image '992.png'
+      print 'encontre algo'
+
+
+      #asd.click
     end
 
   end

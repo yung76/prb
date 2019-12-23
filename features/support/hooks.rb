@@ -1,5 +1,5 @@
 Before do |scenario|
-    @brow = Share::WebPage.new
+    @page = Share::WebPage.new
     puts  "Test #{ scenario.name } started on #{Time.now.strftime '%F %T'} "
 
 end

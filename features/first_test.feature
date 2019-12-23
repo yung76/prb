@@ -1,9 +1,7 @@
-Feature: Open web browser and navigate to any page
+Feature: Automate functional test Falabella
 
-   Test open web browser firefox
-
-   Scenario: Visit a anything page
-    Given browser navigate to web site "http://takanodan.cl/"
-    When looking for an element in page
-    Then click on any element
-    And looking for list of element
+   Scenario: Buy a three product but dont complete de purchase
+    Given browser navigate to web site "https://www.falabella.com/falabella-cl/"
+    Then go to section videogames
+    Then apply filter by brand
+    And increase quantity by three

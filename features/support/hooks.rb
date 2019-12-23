@@ -1,5 +1,7 @@
+require_relative '../../web_page/page'
+
 Before do |scenario|
-    @brow = $asd
+    @browser = WebPage.new
     puts  "Test #{ scenario.name } started on #{Time.now.strftime '%F %T'} "
 
 end

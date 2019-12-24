@@ -9,3 +9,7 @@ gem 'cucumber'
 gem 'capybara'
 
 gem 'activesupport'
+
+gem 'rest-client'
+
+gem 'json'

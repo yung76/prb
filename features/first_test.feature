@@ -1,9 +1,6 @@
-Feature: Open web browser and navigate to any page
+Feature: Automatize Api methods
 
-   Test open web browser firefox
-
-   Scenario: Visit a anything page
-    Given browser navigate to web site "http://takanodan.cl/"
-    When looking for an element in page
-    Then click on any element
-    And looking for list of element
+   Scenario: Test method get gists
+    Given request to url api "https://api.github.com/gists/33"
+    Then response code will be 200
+    And response within valid body JSON

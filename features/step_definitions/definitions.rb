@@ -1,26 +1,28 @@
-Given /^browser navigate to web site "([^"]*)"$/ do |url|
-    #Capybara.app_host = url
-    #visit url
-  #asd = current_session.driver.manage.logs.get(:browser)
-  #puts asd
-  #Asd::WebPage.navigate_to url
-    #@asd2 = WebPage.new
-    #@asd2.navigate_to url
-  @brow.go_to url
+Given /^request to url api (post)? "([^"]*)"$/ do |url,negative|
+  if negative
+    @page.send_request_post url
+  else
+    @page.send_request_get(url)
+  end
 end
 
-Then /^looking for an element in page$/ do
-  #@asd2.find_and_element
-  @brow.find_an_element
+Then /^response code will be 200$/ do
+  assert_equal(200,@page.valid_code, "error de codigo")
 end
 
-Then /^click in label quality assurance$/ do
-    #@asd.click
-    #puts 'Clicking in label'
-    #sleep 10
+Then /^response within valid body JSON$/ do
+   assert(true,@page.valid_body_json)
 end
 
-Then /^looking for list details jobs$/ do
-    #@s = find(:xpath, "//div[contains(@data-group,'quality')]//div[contains(@class,'Table-column Table-headline is-wrapped is-firstMobile')]").size
-    #puts "I found  #{@s} jobs"
+Then /^response state OK$/ do
+  assert_equal(200,@page.state_ok.to_i, "respuesta no valida")
+end
+
+Then /^response time below 500ms$/ do
+  puts @page.time_respose
+  assert_operator(0.5, :>= , @page.time_respose, "Se excedio el tiempo de espera")
+end
+
+Then /^response acepted and created$/ do
+  puts @page.state_method_post
 end

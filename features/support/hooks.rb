@@ -1,5 +1,7 @@
+require_relative '../../web_page/page'
+
 Before do |scenario|
-    @brow = $asd
+    @page = ApiTest.new
     puts  "Test #{ scenario.name } started on #{Time.now.strftime '%F %T'} "
 
 end

@@ -24,3 +24,10 @@ Then /^looking for list details jobs$/ do
     #@s = find(:xpath, "//div[contains(@data-group,'quality')]//div[contains(@class,'Table-column Table-headline is-wrapped is-firstMobile')]").size
     #puts "I found  #{@s} jobs"
 end
+
+Given /^an any application and tap$/ do
+  @page.find_element_on_cellphone
+
+  #@asd2.find_and_element
+  #@brow.find_an_element
+end
